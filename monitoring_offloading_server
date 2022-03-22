@@ -1,0 +1,23 @@
+ ### Key metrics for monitoring SSL Offloading Server ###
+ - CPU load (SSL-Offloading is CPU sensitive process) - Zabbix offering all kind of CPU metrics for monitoring CPU perfomance: 
+    - Processor load (1/5/15 min average per core)		
+    - CPU interrupt time		
+    - CPU iowait time		
+    - CPU steal time	
+	  - CPU system time		
+    - CPU user time
+ - Increase in file descriptor (Slower responses and higher wait time will cause high FD’s on server)
+ - TCP Open Connections (TCP Connections open between Internet<->Proxy<->Web server)
+ - SSL Certificate Expiry on Proxy Server (Zabbix SSL monitoring offering several options to achieve this)
+ - Memory monitoring (RAM memory has very high impact on server perfomance and we always need to be alerted when server is cosuming way too much memory or reaches the certain treshold that we set)
+ - SSL-Offloading proxy server process aliveness ( if it's implemented via nginx then additional monitoring for nginx web-server applies)
+ 
+Basics for monitoring linux based OS's:
+ - System (System uptime)
+ - Security (iptables monitoring, iptables config file checksum, bash history file, /etc/passwd checksum)
+ - Process monitoring (number of running, zombie and overall number of running processes)
+ - Memory monitoring ( available, buffers, cached, total, used) 
+ - Disk drive autodiscovery for write/read and total IOPS operation on hard drive
+ - File system monitoring (Inode,disk space usage, different file system types autodiscovery and their health check)
+ - Network monitoring (ICMP latency, ICMP ping, iptables conntrack connections counts and monitoring according to its limit) and autodiscovery all connected NICs
+  
