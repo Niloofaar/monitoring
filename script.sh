@@ -1,0 +1,6 @@
+#!/bin/bash
+### Descriptoion ###
+# The script designed to generate and print numbers from range 1-10 in random orders using shuf utility bundled in GNU coreutils.
+# the purpose of the utility is for creating a standard output consisting of random permutations of the input.
+
+shuf -i 0-10 -n 10
