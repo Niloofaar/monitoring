@@ -4,4 +4,4 @@
 # the purpose of the utility is for creating a standard output consisting of random permutations of the input.
 # In order to execute this script inside your shell environment, please make it executable using chmod +x script.sh and run it as follow ./script.sh
 
-shuf -i 0-10 -n 10
+shuf -i 1-10 -n 10
